@@ -1,0 +1,128 @@
+@import url("http://fonts.googleapis.com/css?family=Dosis:600");
+
+/*VARIABLES*/
+@white:      #fff;
+@bkg:        #493458;
+@redBlack:   #BE4856;
+@webFont:    'Dosis', sans-serif;
+
+/*MIXINS*/
+#noMargin{
+  margin:   0px;
+  padding:  0px;
+}
+#lineStyle{
+  background-color: @white;
+  width:24px;
+  height:2px;
+}
+
+/*----- GENERAL -*/
+body{
+  font-family:      @webFont;
+  color:            @white;
+  background-color: @bkg;
+  #noMargin();
+}
+ul,li{
+  #noMargin();
+  list-style:none;
+}
+
+/*-----------------------------------------------
+MOBILE
+Content of mobile menu
+-----------------------------------------------*/
+.mobile{
+  padding:40px;
+}
+
+/*-----------------------------------------------
+LABEL
+-----------------------------------------------*/
+.mobile__label{
+  border:solid 2px white;
+  display:inline-block;
+  overflow:hidden;
+  padding:12px 9px;
+  width:24px;
+  white-space: nowrap;
+  &:hover{
+    cursor:pointer;
+    .label__line{
+      margin-left:0px;
+    }
+  }
+}
+  .label__line{
+    #lineStyle();
+    display:inline-block;
+    margin-left: -33px;
+    margin-right: 39px;
+    transition: margin-left .2s linear;
+    &:last-child{
+      /*margin-bottom:0px;*/
+    }
+    /*&:before{
+      #lineStyle();
+      content:'';
+      display:inline-block;
+    }*/
+  }
+
+/*-----------------------------------------------
+INPUT
+-----------------------------------------------*/
+.mobile__input{
+    display:none;
+}
+
+/*-----------------------------------------------
+NAV
+-----------------------------------------------*/
+.mobile__nav{
+  max-height:0;
+  max-width:0;
+  overflow: hidden;
+  transition: max-height 1s linear, max-width 5s linear;
+}
+  .nav__item{
+    white-space: nowrap;
+    a{
+      text-decoration:none;
+      display:block;
+      padding: 5px 0px;
+      color:@white;
+      &:after{
+        display:block;
+        width:15px;
+        height:2px;
+        background-color:@white;
+        content:'';
+      }
+    }
+  }
+.mobile__input:checked+.mobile__nav{
+  max-width:500px;
+  max-height:500px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
