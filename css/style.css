@@ -55,10 +55,10 @@ LABEL
   margin-left: 0px;
 }
 .mobile__label:hover :nth-child(2) .label__line {
-  transition-delay: .2s;
+  transition-delay: .1s;
 }
 .mobile__label:hover :nth-child(3) .label__line {
-  transition-delay: .4s;
+  transition-delay: .2s;
 }
 /*LINES CONTENT*/
 .mobile__label__content {
@@ -91,6 +91,7 @@ INPUT
 NAV
 -----------------------------------------------*/
 .mobile__nav {
+  margin-top: 10px;
   max-height: 0;
   max-width: 0;
   overflow: hidden;

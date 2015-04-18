@@ -59,12 +59,12 @@ LABEL
     /*ANIMATION DELAY*/
     :nth-child(2){
       .label__line{
-        transition-delay:.2s;
+        transition-delay:.1s;
       }
     }
     :nth-child(3){
       .label__line{
-        transition-delay:.4s;
+        transition-delay:.2s;
       }
     }
   }
@@ -87,8 +87,6 @@ LABEL
     margin-right: 43px;
     /*LINES ANIMATION*/
     transition: margin-left .2s linear;
-    &:last-child{
-    }
   }
 
 /*-----------------------------------------------
@@ -102,6 +100,7 @@ INPUT
 NAV
 -----------------------------------------------*/
 .mobile__nav{
+  margin-top: 10px;
   max-height:0;
   max-width:0;
   overflow: hidden;
