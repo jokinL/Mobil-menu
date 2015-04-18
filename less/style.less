@@ -18,6 +18,9 @@
 }
 
 /*----- GENERAL -*/
+*{
+  #noMargin();
+}
 body{
   font-family:      @webFont;
   color:            @white;
@@ -45,29 +48,47 @@ LABEL
   display:inline-block;
   overflow:hidden;
   padding:12px 9px;
-  width:24px;
+  width:25px;
   white-space: nowrap;
   &:hover{
     cursor:pointer;
+    /*ANIMAION POSITION ON HOVER*/
     .label__line{
       margin-left:0px;
     }
+    /*ANIMATION DELAY*/
+    :nth-child(2){
+      .label__line{
+        transition-delay:.2s;
+      }
+    }
+    :nth-child(3){
+      .label__line{
+        transition-delay:.4s;
+      }
+    }
   }
 }
+  /*LINES CONTENT*/
+  .mobile__label__content{
+    font-size: 0;
+    line-height: 0;
+    height: 2px;
+    margin-bottom: 5px;
+    &:last-child{
+      margin-bottom: 0px;
+    }
+  }
+  /*WHITE LINES*/
   .label__line{
     #lineStyle();
     display:inline-block;
     margin-left: -33px;
-    margin-right: 39px;
+    margin-right: 43px;
+    /*LINES ANIMATION*/
     transition: margin-left .2s linear;
     &:last-child{
-      /*margin-bottom:0px;*/
     }
-    /*&:before{
-      #lineStyle();
-      content:'';
-      display:inline-block;
-    }*/
   }
 
 /*-----------------------------------------------
